@@ -1,0 +1,22 @@
+const express= require('express');
+const path=require('path')
+const app= express();
+port=3030;
+app.use(express.static('public'));
+
+app.get('/',(req,res)=>{
+   return res.sendFile(path.resolve(__dirname,'views','index.html'))
+});
+app.get('/about',(req,res)=>{
+    return res.sendFile(path.resolve(__dirname,'views','about.html'))
+ });
+ app.get('/contac',(req,res)=>{
+   return res.sendFile(path.resolve(__dirname,'views','contac.html'))
+});
+app.get('/music',(req,res)=>{
+   return res.sendFile(path.resolve(__dirname,'views','music.html'))
+});
+ app.get('*',(req,res)=>{
+   return res.sendFile(path.resolve(__dirname,'views','notFound.html'))
+});
+app.listen(port, console.log(`server running on port ${port}`));
