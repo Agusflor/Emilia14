@@ -1,7 +1,7 @@
 const express= require('express');
 const path=require('path')
 const app= express();
-port=3030;
+const port=3030;
 app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
