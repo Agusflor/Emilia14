@@ -19,4 +19,4 @@ app.get('/music',(req,res)=>{
  app.get('*',(req,res)=>{
    return res.sendFile(path.resolve(__dirname,'views','notFound.html'))
 });
-app.listen(port, console.log(`server running on port ${port}`));
+app.listen(port, console.log(`server running on port http://localhost:${port}`));

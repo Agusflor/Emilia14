@@ -1,0 +1,6 @@
+.about li{
+    list-style: circle;
+}
+.about h1{
+    line-height: 30px;
+}

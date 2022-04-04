@@ -1,0 +1,22 @@
+body {
+    font-family: 'open sans';
+}
+header ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+h1, h2{
+    text-transform: uppercase;
+    font-family: 'Raleway';
+}
+header nav ul li {
+    text-transform: uppercase
+    ;
+}
