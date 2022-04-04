@@ -1,6 +1,19 @@
-.about li{
-    list-style: circle;
+body.about{
+    background-image: url("/images/emilia-about.jpg");
+    background-size: 75%  ;
+    background-repeat: no-repeat;
+    background-position: right top;
 }
-.about h1{
-    line-height: 30px;
+
+.about section{
+    margin-left: 30px;
+    color: #2da68f;
 }
+.about h4{
+    font-size: 24px;
+}
+
+.about ul{
+    padding: 0;
+}
+
