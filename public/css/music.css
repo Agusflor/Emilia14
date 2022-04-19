@@ -2,6 +2,8 @@
     background-image: url(/images/emilia-music-top.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .music a.goTop {
     color: grey;
@@ -16,5 +18,5 @@
 }
 
 .music main section p{
-    line-height: 10px;
+        line-height: 10px;
 }
