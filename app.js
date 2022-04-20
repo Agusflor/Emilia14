@@ -2,9 +2,24 @@ const express= require('express');
 const path=require('path')
 const app= express();
 const port=3030;
+
+/*configuraciones */
+
+app.set('views', path.resolve(__dirname, 'views')); 
+app.set('view engine', 'ejs');
+
+/*recursos estaticos */
 app.use(express.static('public'));
 
-app.get('/',(req,res)=>{
+/*Enrutadores */
+
+const indexRouter = require('./routers/index');
+const musicRouter = require ('./routers/music');
+ 
+app.use('/', indexRouter);
+app.use('/music', musicRouter);
+
+/*app.get('/',(req,res)=>{
    return res.sendFile(path.resolve(__dirname,'views','index.html'))
 });
 app.get('/about',(req,res)=>{
@@ -15,8 +30,11 @@ app.get('/about',(req,res)=>{
 });
 app.get('/music',(req,res)=>{
    return res.sendFile(path.resolve(__dirname,'views','music.html'))
-});
+}); */
+
+
  app.get('*',(req,res)=>{
-   return res.sendFile(path.resolve(__dirname,'views','notFound.html'))
-});
-app.listen(port, console.log(`server running on port http://localhost:${port}`));
+   return res.render('notFound')});
+
+
+app.listen(port, console.log(`Server running in http://localhost:${port}`));
